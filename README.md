@@ -72,10 +72,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### 部署到github项目托管
 1. 创建React应用： 如果您还没有React应用，可以使用create-react-app来创建一个新的项目。
 2. 安装gh-pages： 在项目的根目录下运行以下命令来安装gh-pages，它是一个帮助您将项目部署到GitHub Pages的npm包。
-```npm install gh-pages --save-dev```
+```bash
+npm install gh-pages --save-dev
+```
 
-3. 修改package.json： 在package.json中添加一个homepage字段，值为项目的GitHub Pages URL，例如：
-```"homepage": "https://{username}.github.io/{repo-name}"```
+4. 修改package.json： 在package.json中添加一个homepage字段，值为项目的GitHub Pages URL，例如：
+```json
+"homepage": "https://{username}.github.io/{repo-name}"
+```
 同时，在`scripts`部分添加`predeploy`和`deploy`命令：
 ```json
 "scripts": {
@@ -84,7 +88,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 }
 ```
 4. 部署到GitHub Pages： 运行以下命令来构建并部署您的应用：
-```npm run deploy```
+```bash
+npm run deploy
+```
 
 这个命令会自动构建应用并将构建的文件推送到GitHub仓库的gh-pages分支。如果一切顺利，您的应用将会被部署到GitHub Pages上，并且可以通过homepage中设置的URL访问。
 
